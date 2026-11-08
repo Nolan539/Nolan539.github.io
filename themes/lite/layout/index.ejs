@@ -1,1 +1,55 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><link rel="shortcut icon" href=/static/favicon.ico><title><%= config && config.title || 'Loading...' %></title><link href=/static/css/app.c64eadfc8d3abfc9d85514dba4054813.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.992b63bf2abbf3194771.js></script><script type=text/javascript src=/static/js/vendor.e12dc8c9af1f7aa12436.js></script><script type=text/javascript src=/static/js/app.bc036f9167871d39aecf.js></script></body></html>
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><link rel="shortcut icon" href=/static/favicon.ico><title><%= config && config.title || 'Loading...' %></title><link href=/static/css/app.c64eadfc8d3abfc9d85514dba4054813.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.992b63bf2abbf3194771.js></script><script type=text/javascript src=/static/js/vendor.e12dc8c9af1f7aa12436.js></script><script type=text/javascript src=/static/js/app.bc036f9167871d39aecf.js></script>
+<style>
+#giscus-wrap{display:none;box-sizing:border-box;max-width:880px;margin:1.5rem auto 3rem;padding:0 1rem;}
+#giscus-wrap.on{display:block;}
+#giscus-wrap iframe{max-height:640px;}
+</style>
+<div id="giscus-wrap"></div>
+<script>
+(function(){
+  var CFG={
+    repo:"Nolan539/Nolan539.github.io",
+    repoId:"R_kgDOVnECkQ",
+    category:"Announcements",
+    categoryId:"DIC_kwDOVnECkc4DKqWS",
+    mapping:"url",
+    strict:"0",
+    reactionsEnabled:"1",
+    emitMetadata:"0",
+    inputPosition:"bottom",
+    theme:"preferred_color_scheme",
+    lang:"zh-CN"
+  };
+  var wrap=document.getElementById("giscus-wrap");
+  function postPage(){ return /^#\/posts\//.test(location.hash||""); }
+  function build(){
+    wrap.innerHTML="";
+    var s=document.createElement("script");
+    s.src="https://giscus.app/client.js";
+    s.setAttribute("data-repo",CFG.repo);
+    s.setAttribute("data-repo-id",CFG.repoId);
+    s.setAttribute("data-category",CFG.category);
+    s.setAttribute("data-category-id",CFG.categoryId);
+    s.setAttribute("data-mapping",CFG.mapping);
+    s.setAttribute("data-strict",CFG.strict);
+    s.setAttribute("data-reactions-enabled",CFG.reactionsEnabled);
+    s.setAttribute("data-emit-metadata",CFG.emitMetadata);
+    s.setAttribute("data-input-position",CFG.inputPosition);
+    s.setAttribute("data-theme",CFG.theme);
+    s.setAttribute("data-lang",CFG.lang);
+    s.crossOrigin="anonymous";
+    s.async=true;
+    wrap.appendChild(s);
+  }
+  function refresh(){
+    if(postPage()){ wrap.classList.add("on"); if(!wrap.firstChild){ build(); } }
+    else { wrap.classList.remove("on"); wrap.innerHTML=""; }
+  }
+  window.addEventListener("hashchange",function(){
+    if(postPage()){ wrap.classList.add("on"); build(); }
+    else { wrap.classList.remove("on"); wrap.innerHTML=""; }
+  });
+  refresh();
+})();
+</script>
+</body></html>
