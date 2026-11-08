@@ -22,6 +22,18 @@
   };
   var wrap=document.getElementById("giscus-wrap");
   function postPage(){ return /^#\/posts\//.test(location.hash||""); }
+  function place(){
+    var art=document.getElementById("detailable-content");
+    if(art && art.parentNode && art.nextSibling!==wrap){ art.parentNode.insertBefore(wrap, art.nextSibling); }
+    return !!art;
+  }
+  function ensurePlaced(cb){
+    if(place()){ cb(); return; }
+    var n=0, timer=setInterval(function(){
+      n++;
+      if(place() || n>=25){ clearInterval(timer); cb(); }
+    },120);
+  }
   function build(){
     wrap.innerHTML="";
     var s=document.createElement("script");
@@ -41,15 +53,13 @@
     s.async=true;
     wrap.appendChild(s);
   }
-  function refresh(){
-    if(postPage()){ wrap.classList.add("on"); if(!wrap.firstChild){ build(); } }
-    else { wrap.classList.remove("on"); wrap.innerHTML=""; }
+  function show(){
+    wrap.classList.add("on");
+    ensurePlaced(function(){ build(); });
   }
-  window.addEventListener("hashchange",function(){
-    if(postPage()){ wrap.classList.add("on"); build(); }
-    else { wrap.classList.remove("on"); wrap.innerHTML=""; }
-  });
-  refresh();
+  function hide(){ wrap.classList.remove("on"); wrap.innerHTML=""; }
+  window.addEventListener("hashchange",function(){ if(postPage()){ show(); } else { hide(); } });
+  if(postPage()){ show(); } else { hide(); }
 })();
 </script>
 </body></html>
