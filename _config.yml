@@ -102,5 +102,5 @@ theme: lite
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/Nolan539/blog.git
+  repo: https://github.com/Nolan539/Nolan539.github.io.git
   branch: main
