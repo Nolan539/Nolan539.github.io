@@ -1,38 +1,46 @@
 ---
-title: Hello World
+title: 你好，世界
+date: 2026-11-10 21:00:00
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+欢迎来到我的博客！这是我的第一篇文章，用来确认站点的一切都正常工作。
 
-### Create a new post
+这个博客由 [Hexo](https://hexo.io/) 驱动，主题是 Lite，评论由 Giscus 提供，数据都放在 GitHub 上，没有服务器，也就不需要额外花钱维护。
+
+## 快速上手
+
+### 新建一篇文章
 
 ``` bash
-$ hexo new "My New Post"
+$ hexo new "我的新文章"
 ```
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+更多说明：[写作](https://hexo.io/docs/writing.html)
 
-### Run server
+### 本地预览
 
 ``` bash
 $ hexo server
 ```
 
-More info: [Server](https://hexo.io/docs/server.html)
+更多说明：[服务器](https://hexo.io/docs/server.html)
 
-### Generate static files
+### 生成静态文件
 
 ``` bash
 $ hexo generate
 ```
 
-More info: [Generating](https://hexo.io/docs/generating.html)
+更多说明：[生成](https://hexo.io/docs/generating.html)
 
-### Deploy to remote sites
+### 发布到线上
 
 ``` bash
 $ hexo deploy
 ```
 
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+更多说明：[部署](https://hexo.io/docs/one-command-deployment.html)
+
+## 关于评论
+
+点开任意一篇文章，滑到正文末尾就能看到评论区。用 GitHub 账号登录后即可留言，所有评论会保存在仓库的 Discussions 里，我随时可以查看和管理。

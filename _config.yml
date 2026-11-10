@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: "Nolan's Blog"
-subtitle: 'Stay curious'
-description: ''
+title: "诺兰的博客"
+subtitle: '保持好奇'
+description: '记录学习与生活的个人博客'
 keywords:
-author: Nolan
+author: 诺兰
 language: zh-CN
 timezone: ''
 

@@ -27,10 +27,8 @@ background:
 
 menu:
   # Basic Menu
-  Home: true
-  Archives: true
-  Categories: false
-  Tags: false
+  首页: /
+  归档: /archives
 
   # Custom Menu
   # '/index' can be omitted
@@ -44,11 +42,8 @@ menu:
 menu_icons:
   enable: true
   # icon name docs: http://fontawesome.io/icons/
-  Home: fa-home
-  Archives: fa-archive
-  Categories: fa-bookmark
-  Tags: fa-hashtag
-  About: fa-smile-o
+  首页: fa-home
+  归档: fa-archive
 
 # -------------------------------------------------------
 # Custom Blur
@@ -146,5 +141,5 @@ google_analytics:
 # powered_by: false
 # powered_by: ''
 powered_by:
-  text:  Hexo Theme Lite
+  text:  由 Hexo 与 Lite 主题驱动
   url:  https://github.com/HeskeyBaozi/hexo-theme-lite/ # or false to disable link
